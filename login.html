@@ -1,0 +1,97 @@
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: <#1369711861741916290>fffff; /* White background */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .login-container {
+    background-color: <#1369711861741916290>9f9f9; /* Light container for contrast */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 350px;
+    box-sizing: border-box;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+  }
+
+  /* Style the input normally */
+  input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Apply a transparent border to prevent size change on focus */
+  input[type="text"]:focus {
+    outline: none;
+    border: 3px solid transparent; /* Make border transparent for smooth transition */
+    border-image-slice: 1;
+    border-image-source: linear-gradient(45deg, #4facfe, #00f2fe);
+    /* Add a slight glow for shader effect instead of changing size */
+    box-shadow: 0 0 8px rgba(70, 170, 255, 0.6);
+  }
+
+  /* Keep the button styles unaffected */
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Bootstrap blue */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm" action="#" method="POST">
+      <label for="key">Key</label>
+      <input type="text" id="key" name="key" placeholder="Enter your access key" required="">
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    // Prevent form submission without any message
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Stops the form from submitting
+    });
+  </script>
+
+</body></html>
